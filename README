@@ -1,0 +1,49 @@
+it would be used to record the Kalman Filter algorithm. 
+1, first is 1-dimention Gaussasian distribution, Kalman Gain, Covariance. priori and posteriori estimate state.
+
+steps to calculate the Kalman filter
+
+Initialization: at time k-1: 
+
+X_(k-1|k-1) ----->  posteriori estimate state 
+Q           ----->  system noise covariance
+R           ----->  measurement noise covariance
+ 
+A           ------> assume to be 1, transfer matrice.
+
+u(K)        ------> asumme to be 0, no control. 
+
+Z(k)		-------> measure value. at time k
+
+P_(k-1|k-1)	-------> noise covariance at k-1
+
+
+step 1: 
+ 
+X(k|k-1) = A X(k-1|k-1) + Bu(k)  ---->  to calculate the priori estimate state, the Prediction 
+
+
+step2:
+
+P_(k|k-1) = A P_(k-1|k-1) A' + Q   	-----> get the priori estimate covariance matrice 
+					(a measure of estimated accuracy of the state estimate)
+					by system noise covariance.
+
+
+step 3:
+
+X_(k|k) = X(k|k-1) + Kg(k)*(Z_k - H X_(k|k-1))   ----> get posteriori estimate state. 
+
+step 4 :
+
+Kg(k) = P_(k|k-1) H'/ (H P_(k|k-1) H' + R)   ----->  Kalman gain
+
+
+step 5:
+
+P_(k|k) = (I - Kg(k)H') P_(k|k-1)   ------ update the posteriori state estimate. 
+
+
+ 
+
+ 
