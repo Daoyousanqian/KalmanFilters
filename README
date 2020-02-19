@@ -43,7 +43,7 @@ step 5:
 
 P_(k|k) = (I - Kg(k)H') P_(k|k-1)   ------ update the posteriori state estimate. 
 
-
+One thing I am still confused is that Kalman gain. Is it like a sigma or sigma^2
  
 
  
