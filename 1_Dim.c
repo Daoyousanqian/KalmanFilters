@@ -35,6 +35,12 @@ float kalmanFilter_filter(KalmanStructTypedef *kalmanFilter, float newMeasured)
     return kalmanFilter->x;//得到现时刻的最优估计
 }
 
+int read_Kalman_parameter(){
+	
+	
+	
+	
+}
 void main(){   // add main function 
 	
 	
