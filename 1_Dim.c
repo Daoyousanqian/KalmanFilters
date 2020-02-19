@@ -1,4 +1,6 @@
 #include "Kalman.h"
+#include<stdio.h>
+#include<stdlib.h>
 /**
  *@function: - 
  *@kalmanFilter  structure
@@ -35,11 +37,15 @@ float kalmanFilter_filter(KalmanStructTypedef *kalmanFilter, float newMeasured)
     return kalmanFilter->x;//得到现时刻的最优估计
 }
 
-int read_Kalman_parameter(){
+
+
+float read_Kalman_parameter(){
 	
+	float Measured_Value;
+	printf("Please input the new measured value:");
+	scanf("%f", &Measured_Value);
 	
-	
-	
+	return Measured_Value;
 }
 void main(){   // add main function 
 	
