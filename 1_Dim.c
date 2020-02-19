@@ -48,10 +48,11 @@ float read_Kalman_parameter(){
 	return Measured_Value;
 }
 void main(){   // add main function 
-	
+	float Final_State;
 	KalmanStructTypedef KalmanFilter1;
 	kalmanFilter_init(&KalmanFilter1, 23.00, 3, 4,4);
-	
+   	Final_State = kalmanFilter_filter(&KalmanFilter1,25);
+	printf("the new state is: %f \n", Final_State);
 	
 	
 	
