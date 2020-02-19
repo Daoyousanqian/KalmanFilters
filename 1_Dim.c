@@ -49,7 +49,8 @@ float read_Kalman_parameter(){
 }
 void main(){   // add main function 
 	
-	kalmanFilter_init(KalmanStructTypedef *kalmanFilter, 23.00, 3, 4,4);
+	KalmanStructTypedef KalmanFilter1;
+	kalmanFilter_init(&KalmanFilter1, 23.00, 3, 4,4);
 	
 	
 	
